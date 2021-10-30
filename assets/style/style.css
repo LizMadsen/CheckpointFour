@@ -1,1 +1,25 @@
-/* BASIC STYLES HERE */
+body {
+  background-image: url("https://pixabay.com/get/g70bf62d12e398f4fd5049ac396d35878c1f0f1e7ce9c374837771be4b2025e82278ead7ec9d7e09c5fdad0aeed40401dcdfc7af90d3afbfd0a7121690a5cfd6a_1280.jpg");
+  position: static;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.searchBar {
+  max-width: 8rem;
+  opacity: 0.5;
+}
+
+.greetingsLiz {
+  width: 30rem;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid rgb(0, 66, 128);
+}
+
+.bottomRow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

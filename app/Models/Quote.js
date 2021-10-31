@@ -7,7 +7,9 @@ export class Quote {
     get Template() {
         return `<div class="text-center quote text-light">
             <h5>${this.quote}</h5>
-            <p>${this.author}</p>
+            <div>
+                <p>${this.author}</p>
+            </div>
         </div>`
     }
 }

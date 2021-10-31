@@ -2,16 +2,16 @@ import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
-  /** @type {import('./Models/Clock').Clock[]} */
-  clock = []
-  /** @type {import('./Models/Image').Image[]} */
-  image = []
-  /** @type {import('./Models/Quote').Quote[]} */
-  quote = []
-  /** @type {import('./Models/Weather').Weather[]} */
-  weather = []
-  /** @type {import('./Models/Todo').Todo[]} */
-  todo = []
+  /** @type {import('./Models/Clock').Clock} */
+  clock
+  /** @type {import('./Models/Image').Image} */
+  image
+  /** @type {import('./Models/Quote').Quote} */
+  quote
+  /** @type {import('./Models/Weather').Weather} */
+  weather
+  /** @type {import('./Models/Todo').Todo} */
+  todo
 }
 
 

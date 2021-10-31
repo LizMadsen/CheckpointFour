@@ -6,7 +6,12 @@ class QuotesServices {
 
     async getSandboxQuote() {
         const res = await sandboxAPI.get('' + 'quotes')
-        ProxyState.quote = res.data.results
+        let quoteData = {
+            quote: res.data.content,
+            author: res.data.author
+        }
+        const quote = new Quote(quoteData)
+        ProxyState.quote = quote
     }
 }
 

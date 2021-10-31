@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://pixabay.com/get/g70bf62d12e398f4fd5049ac396d35878c1f0f1e7ce9c374837771be4b2025e82278ead7ec9d7e09c5fdad0aeed40401dcdfc7af90d3afbfd0a7121690a5cfd6a_1280.jpg");
+  background-image: url("https://pixabay.com/get/ga42991b4799983c50e8ad784237b768c8088cbbfb6ad25683f6cfd44eb2d1ab4963a4781639c10b96380420e8e6bbc21903861d08d20f4963480ea2bd71b2b04_1280.jpg");
   position: static;
   background-repeat: no-repeat;
   background-size: cover;
@@ -7,6 +7,7 @@ body {
 
 .searchBar {
   max-width: 8rem;
+  max-height: 2rem;
   opacity: 0.5;
 }
 
@@ -18,8 +19,40 @@ body {
   border-bottom: 1px solid rgb(0, 66, 128);
 }
 
+.centerRow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .bottomRow {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.clock {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background-color: rgba(84, 84, 84, 0.404);
+  height: 5rem
+}
+
+.quote {
+  /* background-color: rgba(0, 0, 0, 0.322);
+  background-color: rgba(84, 84, 84, 0.404);
+  box-shadow: 0 0 15px 30px hsl(0, 0%, 0%, 0.205); */
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
 }

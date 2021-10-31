@@ -1,11 +1,13 @@
 export class Quote {
     constructor(data) {
         this.quote = data.quote
+        this.author = data.author
     }
 
     get Template() {
-        return `<div id="quote" class="col-md-6 text-center">
-            ${this.quote}
+        return `<div class="text-center quote text-light">
+            <h5>${this.quote}</h5>
+            <p>${this.author}</p>
         </div>`
     }
 }

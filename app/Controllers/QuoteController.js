@@ -4,11 +4,8 @@ import { quotesService } from "../Services/QuotesServices.js"
 function _drawSandboxQuote() {
     const quote = ProxyState.quote
     let template = ''
-    // quote.forEach(q => template +=
-    //     `<div id="quote" class="col-md-6 text-center">
-    //         ${this.quote}
-    //     </div>)`)
-    // document.getElementById('quote').innerHTML = template
+    template = quote.Template
+    document.getElementById('quote').innerHTML = template
 }
 
 export class QuotesController {

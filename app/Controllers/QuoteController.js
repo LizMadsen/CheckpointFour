@@ -18,7 +18,7 @@ export class QuotesController {
         try {
             await quotesService.getSandboxQuote()
         } catch (error) {
-            console.error("[Sandbox Quote Error], error")
+            console.error("[Sandbox Quote Error]", error)
         }
     }
 }

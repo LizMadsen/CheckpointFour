@@ -11,8 +11,8 @@ function _drawSandboxQuote() {
 export class QuotesController {
     constructor() {
         this.getQuote()
-
         ProxyState.on('quote', _drawSandboxQuote)
+        startClockInterval()
     }
     async getQuote() {
         try {
@@ -21,4 +21,18 @@ export class QuotesController {
             console.error("[Sandbox Quote Error]", error)
         }
     }
+}
+
+function startClockInterval() {
+    setInterval(updateClock, 300)
+}
+
+function updateClock() {
+    let currentTime = new Date()
+    ProxyState.quote.time = currentTime.getHours()
+        + ":"
+        + ((currentTime.getMinutes() < 10)
+            ? "0" + currentTime.getMinutes()
+            : currentTime.getMinutes())
+    ProxyState.quote = ProxyState.quote
 }

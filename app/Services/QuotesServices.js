@@ -7,6 +7,7 @@ class QuotesServices {
     async getSandboxQuote() {
         const res = await sandboxAPI.get('' + 'quotes')
         let quoteData = {
+            time: '',
             quote: res.data.content,
             author: res.data.author
         }

@@ -11,7 +11,6 @@ function _drawWeather() {
 export class WeatherController {
     constructor() {
         this.getSandboxWeather()
-
         ProxyState.on('weather', _drawWeather)
     }
     async getSandboxWeather() {
@@ -21,7 +20,7 @@ export class WeatherController {
             console.error("[Sandbox Weather Error], error")
         }
     }
-    toggleTemp(value) {
-        console.log(value.checked)
+    toggleTemp() {
+        weatherService.toggleTemp()
     }
 }

@@ -15,6 +15,7 @@ class WeatherService {
         let weatherData = {
             name: res.data.name,
             temp: fahrenheit,
+            fahrenheit: fahrenheit,
             celcius: celcius,
             description: res.data.weather[0].description,
             icon: weatherIconURL,
@@ -22,6 +23,18 @@ class WeatherService {
         }
         const weather = new Weather(weatherData)
         ProxyState.weather = weather
+    }
+
+    toggleTemp() {
+        ProxyState.weather.isFahrenheit = !ProxyState.weather.isFahrenheit
+        if (ProxyState.weather.isFahrenheit) {
+            ProxyState.weather.scale = 'F'
+            ProxyState.weather.temp = ProxyState.weather.fahrenheit
+        } else {
+            ProxyState.weather.scale = 'C'
+            ProxyState.weather.temp = ProxyState.weather.celcius
+        }
+        ProxyState.weather = ProxyState.weather
     }
 }
 

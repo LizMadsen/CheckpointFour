@@ -50,14 +50,11 @@ body {
 }
 
 .card {
-  background-color: rgba(84, 84, 84, 0.404);
+  background-color: rgba(79, 102, 128, 0.753);
   height: 5rem
 }
 
 .quote {
-  /* background-color: rgba(0, 0, 0, 0.322);
-  background-color: rgba(84, 84, 84, 0.404);
-  box-shadow: 0 0 15px 30px hsl(0, 0%, 0%, 0.205); */
   text-shadow:
   -1px -1px 0 #000,
   1px -1px 0 #000,

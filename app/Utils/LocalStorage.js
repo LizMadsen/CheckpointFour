@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js";
-import { Todo } from "../Models/Task.js";
+import { Task } from "../Models/Task.js";
 
 export function saveState() {
     localStorage.setItem('App', JSON.stringify({
@@ -10,6 +10,6 @@ export function saveState() {
 export function loadState() {
     let data = JSON.parse(localStorage.getItem('App'))
     if (data != null) {
-        ProxyState.tasks = data.todo.map(t => new Todo(t))
+        ProxyState.tasks = data.todo.map(t => new Task(t))
     }
 }

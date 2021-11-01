@@ -21,7 +21,13 @@ export class TaskController {
     }
 
     removeTask(id) {
-        let result = window.confirm("Are you sure you want to delete this task?")
+        // @ts-ignore
+        let result = Swal.fire({
+            title: 'Wait!',
+            text: 'Are you sure you want to delete this task?',
+            icon: 'error',
+            confirmButtonText: 'Cool'
+        })
         console.log(result)
         if (result) {
             tasksServices.removeTask(id)

@@ -1,4 +1,5 @@
 import { ProxyState } from "../AppState.js";
+import { sandboxAPI } from "../Services/AxiosService.js";
 
 export class List {
     constructor() {
@@ -29,9 +30,7 @@ export class List {
     getTasks() {
         const tasks = ProxyState.tasks
         let template = ''
-        tasks.forEach(t => {
-            template += t.Template
-        })
+        tasks.forEach(t => template += t.Template)
         return template
     }
 

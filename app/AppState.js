@@ -10,8 +10,8 @@ class AppState extends EventEmitter {
   quote
   /** @type {import('./Models/Weather').Weather} */
   weather
-  /** @type {import('./Models/Todo').Todo} */
-  todo
+  /** @type {import('./Models/Task').Todo[]} */
+  tasks = []
 }
 
 

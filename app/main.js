@@ -8,7 +8,7 @@ class App {
   quotesController = new QuotesController()
   weatherController = new WeatherController()
   imageController = new ImagesController()
-  todoController = new TaskController()
+  taskController = new TaskController()
   listController = new ListController()
 }
 

@@ -1,11 +1,11 @@
 import { ProxyState } from "../AppState.js";
 import { Task } from "../Models/Task.js"
-import { loadState, saveState } from "../Utils/LocalStorage.js"
+import { sandboxAPI } from "./AxiosService.js"
 
 class TasksServices {
-    createTask(taskData) {
+    async createTask(taskData) {
         const task = new Task(taskData)
-        ProxyState.tasks = [...ProxyState.tasks, task]
+        const res = await sandboxAPI.post('' + 'LizMadsen/todos', task)
     }
 
     removeTask(id) {
@@ -18,7 +18,7 @@ class TasksServices {
         let task = ProxyState.tasks[taskIndex]
         task.isChecked = !task.isChecked
         ProxyState.tasks[taskIndex] = task
-        saveState();
+        ProxyState.tasks = ProxyState.tasks
     }
 }
 

@@ -10,7 +10,7 @@ export class TaskController {
         const form = window.event.target
         let taskData = {
             // @ts-ignore
-            name: form.taskName.value,
+            description: form.description.value,
             isChecked: false
         }
         tasksServices.createTask(taskData)

@@ -38,10 +38,8 @@
   </header>
   <main>
     <div class="container-fluid text-primary">
-      <div class="row m-0 justify-content-center">
-        <div class="col-md-1">
-        </div>
-        <center>
+      <center>
+        <div class="row m-0 d-flex">
           <div class="col-md-7 clock text-light" id="clock">
             <!-- <div id="clock">
               CLOCK
@@ -53,9 +51,17 @@
                   <input type="text" name="" id="" class="greetingsLiz">
               </div>
             </form>
-        </center>
-      </div>
-      </form>
+          </div>
+          <div class="col-3">
+            <div class="card">
+              <div class="card-body todoCard" id="todoList">
+                <!-- TO-DO -->
+                <h5 class="text-light">TO-DO LIST</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </center>
     </div>
     <div class="container-fluid bottomRow text-dark justify-content-between">
       <div class="row m-0 p-2">
@@ -68,25 +74,6 @@
           <!-- <div id="quote" class="col-md-6 text-center">
           QUOTE
         </div> -->
-        </div>
-        <div class="col-3" style="text-align:right">
-          <div class="todoList">
-            <div class="card">
-              <div class="card-body">
-                <!-- <div class="card-body text-light">
-                <p>
-                <div class=" bg-light darken-20 shadow-inset">
-                  ${this.getTasks()}
-                </div>
-                <p class="col-12 text-center">
-                  ${this.tasksRemaining} / ${this.numberOfTasks}
-                </p>
-                <h5>TO-DO LIST</h5>
-              </div> -->
-                <h5 class="text-light">TO-DO LIST</h5>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

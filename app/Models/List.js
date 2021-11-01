@@ -8,19 +8,19 @@ export class List {
         return `
               <div class="text-light">
                 <p>
-                <div class=" bg-light darken-20 shadow-inset">
+                <div class="darken-20 shadow-inset ">
                   ${this.getTasks()}
                 </div>
                 <p class="col-12 text-center">
-                  ${this.tasksRemaining} / ${this.numberOfTasks}
+                  ${this.tasksRemaining} / ${this.numberOfTasks} Remaining
                 </p>
               </div>
-            <form class="row align-items-end" onsubmit="app.taskController.createTask()">
+            <form class="row align-items-end text-center" onsubmit="app.taskController.createTask()">
                 <div class="col-10">
-                    <input type="text" class="form-control my-2" name="taskName" id="" aria-describedby="helpId" placeholder="Add task" pattern=".{3,50}">
+                    <input type="text" class="form-control my-2" name="description" id="" aria-describedby="helpId" placeholder="Add task" pattern=".{3,50}">
                 </div>
-                <button class="btn addTaskButton btn-info my-2">
-                    Add
+                <button class="btn addTaskButton btn-primary my-2">
+                    <i class="fas text-light fa-plus"></i>
                 </button>
             </form>
         `
@@ -36,10 +36,10 @@ export class List {
     }
 
     get tasksRemaining() {
-        return ProxyState.tasks.filter(t => t.isChecked).length
+        return ProxyState.tasks.filter(t => !t.isChecked).length
     }
 
     get numberOfTasks() {
-        return ProxyState.tasks
+        return ProxyState.tasks.length
     }
 }

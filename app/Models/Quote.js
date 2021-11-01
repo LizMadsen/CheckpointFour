@@ -5,7 +5,7 @@ export class Quote {
     }
 
     get Template() {
-        return `<div class="hoverAuthor text-center quote text-light">
+        return `<div class="hoverAuthor text-center quote text-light" title="${this.author}">
             <h5>${this.quote}</h5>
             <div class="hiddenText">
                 <p>${this.author}</p>

@@ -10,16 +10,23 @@ class ListsService {
     createList() {
         const list = new List()
         ProxyState.list = list
-        const res = sandboxAPI.get('' + 'LizMadsen/todos')
-        // res.data.forEach(t => {
-        //     let taskData = {
-        //         id: t.id,
-        //         description: t.description,
-        //         isChecked: t.completed
-        //     }
-        //     const newTask = new Task(taskData)
-        //     ProxyState.tasks.push(newTask)
-        // })
+        this.taskRetrieve()
+    }
+
+    async taskRetrieve() {
+        ProxyState.tasks = []
+        const res = await sandboxAPI.get('' + 'LizMadsen/todos')
+        res.data.forEach(t => {
+            let taskData = {
+                id: t.id,
+                description: t.description,
+                completed: t.completed
+            }
+            const newTask = new Task(taskData)
+            ProxyState.tasks.push(newTask)
+            ProxyState.tasks = ProxyState.tasks
+        })
+
     }
 }
 

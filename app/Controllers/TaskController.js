@@ -11,26 +11,30 @@ export class TaskController {
         let taskData = {
             // @ts-ignore
             description: form.description.value,
-            isChecked: false
+            completed: false
         }
         tasksServices.createTask(taskData)
     }
 
-    toggleCheckbox(checkbox, id) {
-        tasksServices.toggleCheckbox(checkbox, id)
+    toggleCheckbox(id) {
+        tasksServices.toggleCheckbox(id)
     }
 
     removeTask(id) {
-        // @ts-ignore
-        let result = Swal.fire({
-            title: 'Wait!',
-            text: 'Are you sure you want to delete this task?',
-            icon: 'error',
-            confirmButtonText: 'Cool'
-        })
+        let result = window.confirm("Are you sure you want to delete this task?")
         console.log(result)
         if (result) {
             tasksServices.removeTask(id)
         }
     }
 }
+
+
+
+// Swal.fire({
+//     title: 'Wait!',
+//     text: 'Are you sure you want to delete this task?',
+//     confirmButtonText: 'Cool',
+//     cancelButtonText: 'Nah, bruh',
+//     showCancelButton: true,
+//     showCloseButton: true

@@ -21,4 +21,7 @@ export class WeatherController {
             console.error("[Sandbox Weather Error], error")
         }
     }
+    toggleTemp(value) {
+        console.log(value.checked)
+    }
 }

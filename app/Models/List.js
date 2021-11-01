@@ -35,7 +35,7 @@ export class List {
     }
 
     get tasksRemaining() {
-        return ProxyState.tasks.filter(t => !t.isChecked).length
+        return ProxyState.tasks.filter(t => !t.completed).length
     }
 
     get numberOfTasks() {
